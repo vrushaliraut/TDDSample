@@ -39,7 +39,7 @@ public class GeometryLineTest {
     }
 
     @Test
-    public void specifyVerticallyEqualLineShouldReturn6For24AndMinus44Point() {
+    public void specifyHorizontallyllyEqualLineShouldReturn6For24AndMinus44Point() {
         GeometryLine line = new GeometryLine(2, 4, -4, 4);
         assertThat(line.length(), CoreMatchers.equalTo(6));
     }
