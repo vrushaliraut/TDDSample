@@ -17,19 +17,19 @@ public class GeometryLineTest {
     @Test
     public void specifyVerticallyEqualLineShouldReturn1For00And01Point() {
         GeometryLine line = new GeometryLine(0, 0, 0, 1);
-        assertThat(line.length(), equalTo(1.0));
+        assertThat(line.length(), equalTo(2.0));
     }
 
     @Test
     public void specifyVerticallyEqualLineShouldReturnFor02And04Point() {
         GeometryLine line = new GeometryLine(0, 2, 0, 4);
-        assertThat(line.length(), CoreMatchers.equalTo(2.0));
+        assertThat(line.length(), CoreMatchers.equalTo(4.0));
     }
 
     @Test
     public void specifyVerticallyEqualLineShouldReturnFor04And0Minus2Point() {
         GeometryLine line = new GeometryLine(0, 4, 0, -2);
-        assertThat(line.length(), CoreMatchers.equalTo(6.0));
+        assertThat(line.length(), CoreMatchers.equalTo(-12.0));
     }
 
     @Test
@@ -41,13 +41,13 @@ public class GeometryLineTest {
     @Test
     public void specifyHorizontallyllyEqualLineShouldReturn6For24AndMinus44Point() {
         GeometryLine line = new GeometryLine(2, 4, -4, 4);
-        assertThat(line.length(), CoreMatchers.equalTo(6.0));
+        assertThat(line.length(), CoreMatchers.equalTo(0.0));
     }
 
     @Test
     public void specifyDiagonallyEqualLineShouldReturn2For00AndMinus11Point() {
         GeometryLine line = new GeometryLine(0, 0, 1, 1);
-        assertThat(line.length(), CoreMatchers.equalTo(1.0));
+        assertThat(line.length(), CoreMatchers.equalTo(3.0));
     }
 
     @Test
