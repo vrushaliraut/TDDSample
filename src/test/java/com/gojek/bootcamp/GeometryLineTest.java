@@ -55,5 +55,4 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(2, 2, 8, 10);
         assertThat(line.length(), CoreMatchers.equalTo(19.0));
     }
-
 }
