@@ -55,4 +55,10 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(2, 2, 8, 10);
         assertThat(line.length(), CoreMatchers.equalTo(19.0));
     }
+
+    @Test
+    public void specifyEqualityLineWithItselfUsingReflexivity0000PointsShouldReturnTrue() {
+        GeometryLine line = new GeometryLine(0, 0, 0, 0);
+        assertThat(line, equalTo(line));
+    }
 }
