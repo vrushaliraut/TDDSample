@@ -25,4 +25,10 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(0, 2, 0, 4);
         assertThat(line.length(), CoreMatchers.equalTo(2));
     }
+
+    @Test
+    public void specifyHorizontallyEqualLineShouldReturnFor04And0Minus2Point() {
+        GeometryLine line = new GeometryLine(0, 4, 0, -2);
+        assertThat(line.length(), CoreMatchers.equalTo(6));
+    }
 }

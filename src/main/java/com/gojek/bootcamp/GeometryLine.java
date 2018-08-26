@@ -11,6 +11,6 @@ public class GeometryLine {
     }
 
     public int length() {
-        return y2 - y1;
+        return  Math.abs(y2 - y1);
     }
 }
