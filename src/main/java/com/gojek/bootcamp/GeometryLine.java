@@ -17,8 +17,10 @@ public class GeometryLine {
     public int length() {
         if (x1 == x2) {
             return Math.abs(y2 - y1);
-        } else {
+        } else if (y1 == y2) {
             return Math.abs(x2 - x1);
+        } else {
+            return 1;
         }
     }
 }

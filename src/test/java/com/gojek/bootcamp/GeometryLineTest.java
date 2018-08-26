@@ -43,4 +43,10 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(2, 4, -4, 4);
         assertThat(line.length(), CoreMatchers.equalTo(6));
     }
+
+    @Test
+    public void specifyDiagonallyEqualLineShouldReturn2For00AndMinus11Point() {
+        GeometryLine line = new GeometryLine(0, 0, 1, 1);
+        assertThat(line.length(), CoreMatchers.equalTo(1));
+    }
 }
