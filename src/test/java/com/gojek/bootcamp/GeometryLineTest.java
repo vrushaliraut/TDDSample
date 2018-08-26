@@ -1,5 +1,6 @@
 package com.gojek.bootcamp;
 
+import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.equalTo;
@@ -17,5 +18,11 @@ public class GeometryLineTest {
     public void specifyHorizontallyEqualLineShouldReturn1For00And01Point() {
         GeometryLine line = new GeometryLine(0, 0, 0, 1);
         assertThat(line.length(), equalTo(1));
+    }
+
+    @Test
+    public void specifyHorizontallyEqualLineShouldReturnFor02And04Point() {
+        GeometryLine line = new GeometryLine(0, 2, 0, 4);
+        assertThat(line.length(), CoreMatchers.equalTo(2));
     }
 }
