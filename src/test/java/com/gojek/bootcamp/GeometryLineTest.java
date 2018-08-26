@@ -49,4 +49,11 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(0, 0, 1, 1);
         assertThat(line.length(), CoreMatchers.equalTo(1));
     }
+
+    @Test
+    public void specifyLineShouldReturn19For22AndMinus810Point() {
+        GeometryLine line = new GeometryLine(2, 2, 8, 10);
+        assertThat(line.length(), CoreMatchers.equalTo(19));
+    }
+
 }
