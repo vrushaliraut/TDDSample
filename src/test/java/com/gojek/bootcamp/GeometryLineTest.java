@@ -12,4 +12,10 @@ public class GeometryLineTest {
         GeometryLine line = new GeometryLine(0, 0, 0, 0);
         assertThat(line.length(), equalTo(0));
     }
+
+    @Test
+    public void specifyHorizontallyEqualLineShouldReturn1For00And01Point() {
+        GeometryLine line = new GeometryLine(0, 0, 0, 1);
+        assertThat(line.length(), equalTo(1));
+    }
 }
