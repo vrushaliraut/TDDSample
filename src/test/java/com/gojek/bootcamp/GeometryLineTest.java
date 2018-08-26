@@ -15,20 +15,27 @@ public class GeometryLineTest {
     }
 
     @Test
-    public void specifyHorizontallyEqualLineShouldReturn1For00And01Point() {
+    public void specifyVerticallyEqualLineShouldReturn1For00And01Point() {
         GeometryLine line = new GeometryLine(0, 0, 0, 1);
         assertThat(line.length(), equalTo(1));
     }
 
     @Test
-    public void specifyHorizontallyEqualLineShouldReturnFor02And04Point() {
+    public void specifyVerticallyEqualLineShouldReturnFor02And04Point() {
         GeometryLine line = new GeometryLine(0, 2, 0, 4);
         assertThat(line.length(), CoreMatchers.equalTo(2));
     }
 
     @Test
-    public void specifyHorizontallyEqualLineShouldReturnFor04And0Minus2Point() {
+    public void specifyVerticallyEqualLineShouldReturnFor04And0Minus2Point() {
         GeometryLine line = new GeometryLine(0, 4, 0, -2);
         assertThat(line.length(), CoreMatchers.equalTo(6));
     }
+
+    @Test
+    public void specifyHorizontallyEqualLineShouldReturn1For00And10Point() {
+        GeometryLine line = new GeometryLine(0, 0, 1, 0);
+        assertThat(line.length(), equalTo(1));
+    }
+
 }
