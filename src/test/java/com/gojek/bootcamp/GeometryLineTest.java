@@ -4,7 +4,7 @@ import org.hamcrest.CoreMatchers;
 import org.junit.Test;
 
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertThat;
 
 public class GeometryLineTest {
 
@@ -60,5 +60,13 @@ public class GeometryLineTest {
     public void specifyEqualityLineWithItselfUsingReflexivity0000PointsShouldReturnTrue() {
         GeometryLine line = new GeometryLine(0, 0, 0, 0);
         assertThat(line, equalTo(line));
+    }
+
+    @Test
+    public void specifyEqualityTwoLineUsingSymmetric() {
+        GeometryLine line = new GeometryLine(1, 2, 3, 4);
+        GeometryLine anotherLine = new GeometryLine(1, 2, 3, 4);
+        assertThat(line, equalTo(anotherLine));
+        assertThat(anotherLine, equalTo(line));
     }
 }

@@ -22,8 +22,16 @@ public class GeometryLine {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        else return false;
+        if (this == o)
+            return true;
+        GeometryLine line = (GeometryLine) o;
+        if ((this.x1 == line.x1) && (this.y1 == line.y1)) {
+            if ((this.x2 == line.x2) && (this.y2 == line.y2)) {
+                return true;
+            }
+            return false;
+        }
+        return false;
     }
 
     @Override
