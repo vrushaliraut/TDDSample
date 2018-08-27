@@ -30,6 +30,11 @@ public class GeometryLine {
                 return true;
             }
             return false;
+        }else if ((this.x1 == line.x2) && (this.y1 == line.y2)) {
+            if ((this.x2 == line.x1) && (this.y2 == line.y1)) {
+                return true;
+            }
+            return false;
         }
         return false;
     }

@@ -69,4 +69,14 @@ public class GeometryLineTest {
         assertThat(line, equalTo(anotherLine));
         assertThat(anotherLine, equalTo(line));
     }
+
+    @Test
+    public void ifLine1WithEndPoints1234EqualsLine2WithEndPoints1234AndLine2EqualsLine3WithEndPoints1234ThenLine3EqualsLine1() {
+        GeometryLine line1 = new GeometryLine(1, 2, 3, 4);
+        GeometryLine line2 = new GeometryLine(1, 2, 3, 4);
+        GeometryLine line3 = new GeometryLine(1, 2, 3, 4);
+        assertThat(line1, equalTo(line2));
+        assertThat(line2, equalTo(line3));
+        assertThat(line3, equalTo(line1));
+    }
 }
